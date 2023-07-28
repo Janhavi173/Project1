@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CubeGizmoDrawer : MonoBehaviour
+public class CubeGizmo : MonoBehaviour
 {
-    
+
     public float cubeSize = 1.0f;
+    private float axisLength = 1.2f;
 
     private void OnDrawGizmosSelected()
     {
+        // Draw the cube gizmo
+        DrawCubeGizmo();
+        DrawAxes();
+    }
+
+
+    private void DrawCubeGizmo()
+    {
         Gizmos.color = Color.green;
 
-     
+
         Vector3[] cubeCorners = new Vector3[8];
         float halfSize = cubeSize * 0.5f;
 
@@ -40,6 +49,18 @@ public class CubeGizmoDrawer : MonoBehaviour
         Gizmos.DrawLine(cubeCorners[1], cubeCorners[5]);
         Gizmos.DrawLine(cubeCorners[2], cubeCorners[6]);
         Gizmos.DrawLine(cubeCorners[3], cubeCorners[7]);
+    }
+
+    private void DrawAxes()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.right * axisLength);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * axisLength);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.forward * axisLength);
     }
 }
 

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DC69E0C7-F985-AB8C-BB51-815B026CBB4B}</ProjectGuid>
+    <ProjectGuid>{5E6F06A8-0688-DB99-48A4-20BBD5E6403A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,7 +58,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Gizmo.cs" />
+    <Compile Include="Assets\CubeGizmo.cs" />
+    <Compile Include="Assets\ObjectInstantiator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
