@@ -4,6 +4,8 @@ public class Shader : MonoBehaviour
 {
     public Material unlitMaterial;
     public Material standardMaterial;
+    public Material transparentMaterial;
+    public Material outlineMaterial;
 
     private Renderer objectRenderer;
 
@@ -30,6 +32,10 @@ public class Shader : MonoBehaviour
         {
             SwitchToStandardMaterial();
         }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            SwitchToTransparentMaterial();
+        }
     }
 
     private void SwitchToUnlitMaterial()
@@ -40,5 +46,10 @@ public class Shader : MonoBehaviour
     private void SwitchToStandardMaterial()
     {
         objectRenderer.material = standardMaterial;
+    }
+
+    private void SwitchToTransparentMaterial()
+    {
+        objectRenderer.material = transparentMaterial;
     }
 }

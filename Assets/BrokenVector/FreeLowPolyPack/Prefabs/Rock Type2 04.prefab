@@ -96,5 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0829f85f648b0444fb2a24b7f2454a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlitMaterial: {fileID: 2100000, guid: ab1dbb0136616dd46a0345242e689a00, type: 2}
-  standardMaterial: {fileID: 2100000, guid: 90d9a22594834784bb27eb707fbded98, type: 2}
+  unlitMaterial: {fileID: 2100000, guid: e012644947246ca4db6d9f210f4d87a9, type: 2}
+  standardMaterial: {fileID: 2100000, guid: 6054441f805622640979dff5fa924407, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: e6b8cc727b4325b47812c645f5e3eaa9, type: 2}
+  outlineMaterial: {fileID: 0}
