@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 470440}
   - component: {fileID: 3332752}
   - component: {fileID: 2323336}
-  - component: {fileID: 4679058513515146399}
+  - component: {fileID: 8308976891228673522}
   m_Layer: 0
   m_Name: Tree Type1 04
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4679058513515146399
+--- !u!114 &8308976891228673522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +96,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0829f85f648b0444fb2a24b7f2454a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlitMaterial: {fileID: 2100000, guid: e012644947246ca4db6d9f210f4d87a9, type: 2}
-  standardMaterial: {fileID: 2100000, guid: 6054441f805622640979dff5fa924407, type: 2}
-  transparentMaterial: {fileID: 2100000, guid: e6b8cc727b4325b47812c645f5e3eaa9, type: 2}
-  outlineMaterial: {fileID: 0}
+  newTexture: {fileID: 0}

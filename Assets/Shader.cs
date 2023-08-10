@@ -1,55 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Shader : MonoBehaviour
+public class Example : MonoBehaviour
 {
-    public Material unlitMaterial;
-    public Material standardMaterial;
-    public Material transparentMaterial;
-    public Material outlineMaterial;
+    Shader shader1;
+    Shader shader2;
+    Shader shader3;
+    Renderer rend;
 
-    private Renderer objectRenderer;
+    public Texture newTexture; // Texture to apply to the shader
 
-    private void Start()
+    void Start()
     {
-        objectRenderer = GetComponent<Renderer>();
-
-        // Make sure you have assigned materials to the script component in the Inspector.
-        if (unlitMaterial == null || standardMaterial == null)
-        {
-            Debug.LogError("Error!");
-            enabled = false; // Disable the script if the materials are not assigned properly.
-        }
+        rend = GetComponent<Renderer>();
+        shader1 = Shader.Find("Standard");
+        shader2 = Shader.Find("Unlit/Color");
+        shader3 = Shader.Find("Unlit/Transparent");
     }
 
-    private void Update()
+    void Update()
     {
-        // Check for key presses and switch materials accordingly.
         if (Input.GetKeyDown(KeyCode.A))
         {
-            SwitchToUnlitMaterial();
+            rend.material.shader = shader1;
+            rend.material.SetColor("_Color", rend.material.color); 
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            SwitchToStandardMaterial();
+            rend.material.shader = shader2;
+            rend.material.SetColor("_Color", rend.material.color);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            SwitchToTransparentMaterial();
+            rend.material.shader = shader3;
+            
         }
-    }
-
-    private void SwitchToUnlitMaterial()
-    {
-        objectRenderer.material = unlitMaterial;
-    }
-
-    private void SwitchToStandardMaterial()
-    {
-        objectRenderer.material = standardMaterial;
-    }
-
-    private void SwitchToTransparentMaterial()
-    {
-        objectRenderer.material = transparentMaterial;
     }
 }
