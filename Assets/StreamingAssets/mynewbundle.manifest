@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 2084624937
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5004e7fb2c6186ed7a0847fb563ec79f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 79161a99923c0402a067b5d5cd4f6cfd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c940b5cd091715b469963878b0cee5b4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ad2d8298da1757e49abb848247506d3b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0829f85f648b0444fb2a24b7f2454a9f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BundledAssets/mynewbundle/Material_1.mat
+- Assets/BundledAssets/mynewbundle/Object1.prefab
+Dependencies: []
