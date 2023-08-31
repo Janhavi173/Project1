@@ -2,27 +2,38 @@ using UnityEngine;
 
 public class UseAssetBundle : MonoBehaviour
 {
-    [SerializeField] private string bundlePath; // Path to asset bundle file
+    public string assetBundlePath;
 
-    private void Start()
-    {
-        LoadAssetBundle();
-    }
+    private AssetBundle assetBundle;
 
-    private void LoadAssetBundle()
+    void Start()
     {
-        AssetBundle assetBundle = AssetBundle.LoadFromFile(bundlePath);
+
+        assetBundle = AssetBundle.LoadFromFile(assetBundlePath);
 
         if (assetBundle == null)
         {
-            Debug.LogError("Failed to load Asset Bundle.");
+            Debug.LogError("Failed to load asset bundle!");
             return;
         }
 
-        
-        GameObject myPrefab = assetBundle.LoadAsset<GameObject>("Object1");
+        InstantiateFromAssetBundle();
+    }
 
-        
-        assetBundle.Unload(false); 
+    void InstantiateFromAssetBundle()
+    {
+
+        GameObject prefab = assetBundle.LoadAsset<GameObject>("Object1");
+        Instantiate(prefab);
+    }
+
+    void OnDestroy()
+    {
+
+        if (assetBundle != null)
+        {
+            assetBundle.Unload(false);
+        }
     }
 }
+
